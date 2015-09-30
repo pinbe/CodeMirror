@@ -18,7 +18,7 @@
       'Defined', 'Definition', 'Delimit',
       'Eval',
       'End', 'Example', 'Export',
-      'Fact', 'Fixpoint',
+      'Fact', 'Fixpoint', 'From',
       'Global', 'Goal', 'Graph',
       'Hint', 'Hypotheses', 'Hypothesis',
       'Implicit', 'Implicits', 'Import', 'Inductive', 'Infix', 'Instance',
@@ -34,7 +34,7 @@
       'Save', 'Scope', 'Search', 'Section', 'Set', 'Show', 'Strict', 'Structure',
       'Tactic', 'Theorem',
       'Unset',
-      'Variable', 'Variables', 'View',
+      'Variable', 'Variables', 'View'
     ];
 
     var gallina = [
@@ -49,7 +49,7 @@
       'return',
       'struct',
       'then',
-      'when', 'with',
+      'when', 'with'
     ];
 
     var tactics = [
@@ -69,7 +69,7 @@
       'right', 'ring',
       'set', 'simpl', 'specialize', 'split', 'subst', 'symmetry',
       'transitivity', 'trivial',
-      'unfold', 'unlock', 'using',
+      'unfold', 'unlock', 'using'
     ];
 
     var terminators = [
@@ -79,12 +79,12 @@
       'exact',
       'omega',
       'reflexivity',
-      'tauto',
+      'tauto'
     ];
 
     var admitters = [
       'admit',
-      'Admitted',
+      'Admitted'
     ];
 
     var words = {};
