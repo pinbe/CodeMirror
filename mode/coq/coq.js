@@ -60,7 +60,7 @@
       'eapply', 'eassumption', 'eauto', 'econstructor', 'elim',
       'field', 'firstorder', 'fold', 'fourier',
       'generalize',
-      'hnf',
+      'have', 'hnf',
       'induction', 'injection', 'intro', 'intros', 'inversion',
       'left',
       'move',
@@ -74,9 +74,11 @@
 
     var terminators = [
       'assumption',
+      'by',
       'contradiction',
       'discriminate',
       'exact',
+      'now',
       'omega',
       'reflexivity',
       'tauto'
