@@ -32,23 +32,25 @@
       'Qed',
       'Record', 'Relation', 'Remark', 'Require', 'Reserved', 'Resolve', 'Rewrite',
       'Save', 'Scope', 'Search', 'Section', 'Set', 'Show', 'Strict', 'Structure',
-      'Tactic', 'Theorem',
+      'Tactic', 'Theorem', 'Types',
       'Unset',
       'Variable', 'Variables', 'View'
     ];
 
     var gallina = [
       'as',
+      'at',
       'cofix',
-      'else', 'end', 'exists',
-      'fix', 'for', 'forall',
+      'else', 'end',
+      'False', 'fix', 'for', 'forall', 'fun',
       'if', 'in', 'is',
       'let',
       'match',
       'of',
+      'Prop',
       'return',
       'struct',
-      'then',
+      'then', 'True', 'Type',
       'when', 'with'
     ];
 
@@ -57,10 +59,10 @@
       'case', 'change', 'clear', 'compute', 'congruence', 'constructor',
       'cut', 'cutrewrite',
       'dependent', 'destruct',
-      'eapply', 'eassumption', 'eauto', 'econstructor', 'elim',
+      'eapply', 'eassumption', 'eauto', 'econstructor', 'elim', 'exists',
       'field', 'firstorder', 'fold', 'fourier',
       'generalize',
-      'hnf',
+      'have', 'hnf',
       'induction', 'injection', 'intro', 'intros', 'inversion',
       'left',
       'move',
@@ -74,9 +76,11 @@
 
     var terminators = [
       'assumption',
+      'by',
       'contradiction',
       'discriminate',
       'exact',
+      'now',
       'omega',
       'reflexivity',
       'tauto'
