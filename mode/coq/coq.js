@@ -103,7 +103,26 @@
 //        'true': 'atom',
 
     function tokenBase(stream, state) {
+      if(stream.sol())
+        state.logicalsol = true; // logicalsol: only \s caracters seen from sol
+      if(stream.eol())
+        state.logicalsol = false;
+      stream.eatSpace();
+
       var ch = stream.next();
+
+      if(state.logicalsol) {
+        if(/[\*\-\+]/.test(ch)) {
+          state.logicalsol = false;
+          return 'bullet';
+        }
+        if(/[\{\}]/.test(ch)) {
+          state.logicalsol = false;
+          return 'brace';
+        }
+        if(!(/\s/.test(ch)))
+          state.logicalsol = false;
+      }
 
       if(ch === '.') {
         state.tokenize = tokenStatementEnd;
@@ -192,7 +211,7 @@
         return {tokenize: tokenBase, commentLevel: 0};
       },
       token: function(stream, state) {
-        if (stream.eatSpace()) return null;
+        //if (stream.eatSpace()) return null;
         return state.tokenize(stream, state);
       },
       blockCommentStart: "(*",
