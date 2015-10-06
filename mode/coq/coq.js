@@ -103,11 +103,15 @@
 //        'true': 'atom',
 
     function tokenBase(stream, state) {
-      if(stream.sol())
+      if(stream.sol()) {
         state.logicalsol = true; // logicalsol: only \s caracters seen from sol
+        stream.eatSpace();
+      }
       if(stream.eol())
         state.logicalsol = false;
-      stream.eatSpace();
+
+      if(stream.eatSpace())
+        return null;
 
       var ch = stream.next();
 
