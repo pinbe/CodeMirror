@@ -105,7 +105,6 @@
     function tokenBase(stream, state) {
       if(stream.sol()) {
         state.logicalsol = true; // logicalsol: only \s caracters seen from sol
-        stream.eatSpace();
       }
       if(stream.eol())
         state.logicalsol = false;
@@ -215,7 +214,6 @@
         return {tokenize: tokenBase, commentLevel: 0};
       },
       token: function(stream, state) {
-        //if (stream.eatSpace()) return null;
         return state.tokenize(stream, state);
       },
       blockCommentStart: "(*",
