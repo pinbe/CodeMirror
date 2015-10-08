@@ -63,7 +63,7 @@
       'field', 'firstorder', 'fold', 'fourier',
       'generalize',
       'have', 'hnf',
-      'induction', 'injection', 'intro', 'intros', 'inversion',
+      'induction', 'injection', 'instantiate', 'intro', 'intros', 'inversion',
       'left',
       'move',
       'pattern', 'pose',
