@@ -11,7 +11,7 @@
   CodeMirror.defineMode('coq', function(_config, parserConfig) {
 
     var vernacular = [
-      'Add', 'All', 'Arguments', 'Axiom',
+      'About', 'Add', 'All', 'Arguments', 'Axiom',
       'Bind',
       'Canonical', 'Check', 'Class', 'Close', 'Coercion', 'CoFixpoint',
       'CoInductive', 'Context', 'Contextual', 'Corollary',
@@ -57,7 +57,7 @@
     var tactics = [
       'after', 'apply', 'assert', 'auto', 'autorewrite',
       'case', 'change', 'clear', 'compute', 'congruence', 'constructor',
-      'cut', 'cutrewrite',
+      'congr', 'cut', 'cutrewrite',
       'dependent', 'destruct',
       'eapply', 'eassumption', 'eauto', 'econstructor', 'elim', 'exists',
       'field', 'firstorder', 'fold', 'fourier',
@@ -69,9 +69,11 @@
       'pattern', 'pose',
       'refine', 'remember', 'rename', 'replace', 'revert', 'rewrite',
       'right', 'ring',
-      'set', 'simpl', 'specialize', 'split', 'subst', 'symmetry',
+      'set', 'simpl', 'specialize', 'split', 'subst', 'suff', 'symmetry',
       'transitivity', 'trivial',
-      'unfold', 'unlock', 'using'
+      'unfold', 'unlock', 'using',
+      'vm_compute',
+      'wlog'
     ];
 
     var terminators = [
