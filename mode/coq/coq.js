@@ -169,6 +169,10 @@
         return 'operator';
       }
 
+      if(/[\[\]]/.test(ch)) {
+        return 'bracket';
+      }
+
       stream.eatWhile(/\w/);
       var cur = stream.current();
       return words.hasOwnProperty(cur) ? words[cur] : 'variable';
@@ -176,7 +180,7 @@
 
     function tokenString(stream, state) {
       var next, end = false, escaped = false;
-      while ((next = stream.next()) != null) {
+      while ((next = stream.next()) !== null) {
         if (next === '"' && !escaped) {
           end = true;
           break;
@@ -191,7 +195,7 @@
 
     function tokenComment(stream, state) {
       var prev, next;
-      while(state.commentLevel > 0 && (next = stream.next()) != null) {
+      while(state.commentLevel > 0 && (next = stream.next()) !== null) {
         if (prev === '(' && next === '*') state.commentLevel++;
         if (prev === '*' && next === ')') state.commentLevel--;
         prev = next;
