@@ -146,7 +146,11 @@
           state.tokenize = tokenComment;
           return state.tokenize(stream, state);
         }
+        return 'parenthesis';
       }
+
+      if(ch === ')')
+        return 'parenthesis';
 
       if (ch === '~') {
         stream.eatWhile(/\w/);
